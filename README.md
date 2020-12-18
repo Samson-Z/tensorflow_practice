@@ -1,6 +1,5 @@
 # tensorflow_practice
-some code for tensorflow practice
 
-mainly including image classification codes
+Mainly including image classification codes
 
-tensorflow version 2.1
+Tensorflow version 2.1
