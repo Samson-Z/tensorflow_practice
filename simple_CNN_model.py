@@ -4,6 +4,8 @@ from tensorflow.keras import Model
 import matplotlib.pyplot as plt
 
 (train_images, train_labels), (test_images, test_labels) = tf.keras.datasets.cifar10.load_data()
+
+#转换数据格式
 train_images = tf.cast(train_images, tf.float32)
 train_labels = tf.cast(train_labels, tf.float32)
 test_images = tf.cast(test_images, tf.float32)
@@ -40,6 +42,7 @@ model.compile(optimizer='adam',
 
 history = model.fit(train_images, train_labels, validation_split=0.1, epochs=3)
 
+#可视化acc和loss曲线
 acc = history.history['sparse_categorical_accuracy']
 val_acc = history.history['val_sparse_categorical_accuracy']
 loss = history.history['loss']
